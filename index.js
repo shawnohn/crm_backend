@@ -10,9 +10,6 @@ const PORT = 4000;
 // mongoose connection
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/CRMdb', {
-  // mongoose.connect(
-  //   'mongodb+srv://team-kiwi-user:hatchways-team-kiwi@team-kiwi-cluster-yv3im.mongodb.net/hatchways?retryWrites=true&w=majority',
-  //   {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
