@@ -1,6 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
-import { addNewContact, getContact } from '../controllers/crmController';
+import {
+  addNewContact,
+  getContact,
+  getContactWithID,
+  updateContact,
+  deleteContact,
+} from '../controllers/crmController';
 
 const routes = (app) => {
   app
@@ -13,10 +19,7 @@ const routes = (app) => {
     }, getContact)
     .post(addNewContact);
 
-  app
-    .route('/contact/:contactID')
-    .put((req, res) => res.send('PUT request successful!'))
-    .delete((req, res) => res.send('DELETE request successful!'));
+  app.route('/contact/:contactID').get(getContactWithID).put(updateContact).delete(deleteContact);
 };
 
 export default routes;
