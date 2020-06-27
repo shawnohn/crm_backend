@@ -1,2 +1,4 @@
 # crm_backend
-CRM Back-End
+CRM Back-End Project
+
+node.js, Express.js, MongoDB
